@@ -29,12 +29,9 @@ const QuestionnaireForm = () => {
   const [isDisabled, setIsDisabled] = useState(true);
   const {
     register,
-    watch,
-    setValue,
-    reset,
     clearErrors,
     resetField,
-    formState: { errors, isDirty },
+    formState: { errors },
   } = useFormContext<FormValues>();
 
   console.log(isDisabled);
@@ -44,7 +41,6 @@ const QuestionnaireForm = () => {
     if (isDisabled) {
       resetField('pastaList');
       clearErrors('pastaList');
-      reset();
     }
   };
 

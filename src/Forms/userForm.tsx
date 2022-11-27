@@ -55,6 +55,8 @@ const UserForm = () => {
     }
   }, [watch('postcode')]);
 
+  console.log(watch('address1'));
+
   return (
     <>
       <h4 className='pl-3'>お客様情報</h4>
