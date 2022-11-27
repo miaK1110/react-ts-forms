@@ -1,0 +1,7 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+.App {
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+}
