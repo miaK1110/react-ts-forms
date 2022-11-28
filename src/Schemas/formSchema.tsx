@@ -47,4 +47,28 @@ export const FormSchema = yup.object().shape({
     ),
   pastaList: yup.array().min(1, '1つ以上選択してください'),
   acceptTerms: yup.bool().oneOf([true], 'チェックをいれてください'),
+  creditCardNumber: yup
+    .number()
+    .typeError('半角数字でお願いします')
+    .required('クレジットカード番号は入力必須です')
+    .label('クレジットカード番号は半角数字でご入力ください'),
+
+  creditCardGivenName: yup
+    .string()
+    .max(50, '名前項目で入力できるのは50文字までです')
+    .required('名前は入力必須です'),
+
+  creditCardFamilyName: yup
+    .string()
+    .max(50, '名前項目で入力できるのは50文字までです')
+    .required('名前は入力必須です'),
+  creditCardExpMonth: yup.string().max(2).required('入力必須です'),
+  creditCardExpYear: yup.string().max(4).required('入力必須です'),
+  creditCardCvv: yup
+    .number()
+    .positive('セキュリティコードは半角数字でご入力ください')
+    .typeError('半角数字でお願いします')
+    .max(5)
+    .required('セキュリティコードは入力必須です')
+    .label('セキュリティコードは半角数字でご入力ください'),
 });

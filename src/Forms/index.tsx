@@ -7,6 +7,7 @@ import { FormSchema } from '../Schemas/formSchema';
 
 import UserForm from './userForm';
 import QuestionnaireForm from './questionnaireForm';
+import CreditCardForm from './creditCardForm';
 
 type FormValues = {
   name: string;
@@ -28,7 +29,8 @@ const ParentForm = () => {
           onSubmit={methods.handleSubmit(onSubmit)}
         >
           <UserForm />
-          <QuestionnaireForm />
+          {/* <QuestionnaireForm /> */}
+          <CreditCardForm />
           <Col className='text-center mb-5'>
             <Button variant='danger' size='lg' type='submit'>
               内容を送信する
